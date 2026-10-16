@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Danh sách thành viên lớp K66 Sư phạm Tin học">
+  <title>Thành viên | K66 ĐHSP Tin</title>
+</head>
+<body>
+  <header>
+    <nav aria-label="Điều hướng chính">
+      <a href="index.html"><span>K66</span> ĐHSP TIN</a>
+      <ul>
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a aria-current="page" href="members.html">Thành viên</a></li>
+        <li><a href="schedule.html">Thời khóa biểu</a></li>
+        <li><a href="ramdom.html">Random trực nhật</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section>
+      <h1>Danh Sách Thành Viên Lớp</h1>
+      <p>Tra cứu 58 sinh viên lớp K66 Sư phạm Tin học.</p>
+
+      <div>
+        <div>
+          <label for="member-search">Tìm theo tên</label>
+          <input id="member-search" type="search" placeholder="Tìm theo tên hoặc chức vụ...">
+        </div>
+        <div>
+          <label for="role-filter">Lọc chức vụ</label>
+          <select id="role-filter">
+            <option value="all">Tất cả chức vụ</option>
+          </select>
+        </div>
+        <div>
+          <label for="sort-order">Sắp xếp</label>
+          <select id="sort-order">
+            <option value="asc">Tên A → Z</option>
+            <option value="desc">Tên Z → A</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="member-grid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <div>
+        <h5>K66 ĐHSP TIN HỌC</h5>
+        <small>Sản phẩm Bài tập lớn Nhóm 01 - Học phần ICT0023</small>
+      </div>
+      <small> 2026 K66 ĐHSP Tin</small>
+    </div>
+  </footer>
+</body>
+</html>
