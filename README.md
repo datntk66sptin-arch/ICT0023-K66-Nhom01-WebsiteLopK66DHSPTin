@@ -20,7 +20,7 @@
 * **Tòng Văn Dương** (Người kiểm thử)
   - **Tài khoản GitHub:** @duongtv
   - **Email:** duongtv.k66sptin@utb.edu.vn
-  - **Nhiệm vụ:** Xây dựng trang Hoạt động - Thông báo (`activities.html`), phát triển trang Liên hệ / Form góp ý (`contact.html`) có kiểm tra tính hợp lệ dữ liệu.
+  - **Nhiệm vụ:** Phát triển trang Liên hệ / Form góp ý (contact.html) có kiểm tra tính hợp lệ dữ liệu và phối hợp xây dựng album ảnh hoạt động trên trang chủ."
 ---
 ## 2. Kế hoạch phát triển và lưu mốc phiên bản (Tags)
 * `v0.1-y-tuong`: Hoàn thiện ý tưởng đề tài, tài liệu phân công nhiệm vụ và cấu trúc thư mục ban đầu.
