@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Biểu mẫu góp ý cho website K66 ĐHSP Tin">
   <title>Liên hệ | K66 ĐHSP Tin</title>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
   <header>
@@ -13,7 +14,7 @@
       <ul>
         <li><a href="index.html">Trang chủ</a></li>
         <li><a href="members.html">Thành viên</a></li>
-        <li><a href="schedule.html">Thời khóa biểu</a></li>
+        <li><a href="tkb.html">Thời khóa biểu</a></li>
         <li><a href="ramdom.html">Random trực nhật</a></li>
         <li><a aria-current="page" href="contact.html">Liên hệ</a></li>
       </ul>
@@ -25,45 +26,45 @@
       <h1>Gửi Lời Nhắn & Góp Ý</h1>
       <p>Mọi nhận xét đóng góp giúp website hoàn thiện hơn. Biểu mẫu kiểm tra hợp lệ dữ liệu ngay trên trình duyệt.</p>
 
-      <form id="contact-form" novalidate>
+      <form id="bieu-mau-lien-he" novalidate>
         <div>
-          <label for="contact-name">Họ và tên / Tên hiển thị</label>
-          <input type="text" id="contact-name" required placeholder="Nhập tên của bạn...">
+          <label for="ho-ten">Họ và tên / Tên hiển thị</label>
+          <input type="text" id="ho-ten" required placeholder="Nhập tên của bạn...">
           <div>Vui lòng nhập tên (từ 2 đến 60 ký tự).</div>
         </div>
 
         <div>
-          <label for="contact-email">Email liên hệ (Không bắt buộc)</label>
-          <input type="email" id="contact-email" placeholder="example@utb.edu.vn">
+          <label for="email-lien-he">Email liên hệ (Không bắt buộc)</label>
+          <input type="email" id="email-lien-he" placeholder="example@utb.edu.vn">
           <div>Email chưa đúng định dạng.</div>
         </div>
 
         <div>
-          <label for="contact-topic">Chủ đề góp ý</label>
-          <select id="contact-topic" required>
+          <label for="chu-de">Chủ đề góp ý</label>
+          <select id="chu-de" required>
             <option value="">-- Chọn một chủ đề --</option>
-            <option value="content">Nội dung thông tin</option>
-            <option value="member">Danh sách thành viên</option>
-            <option value="schedule">Thời khóa biểu</option>
-            <option value="other">Ý kiến khác</option>
+            <option value="noi-dung">Nội dung thông tin</option>
+            <option value="thanh-vien">Danh sách thành viên</option>
+            <option value="thoi-khoa-bieu">Thời khóa biểu</option>
+            <option value="khac">Ý kiến khác</option>
           </select>
           <div>Vui lòng chọn chủ đề góp ý.</div>
         </div>
 
         <div>
-          <label for="contact-message">Nội dung góp ý</label>
-          <textarea id="contact-message" rows="5" required placeholder="Nhập chi tiết nội dung góp ý..."></textarea>
+          <label for="noi-dung-gop-y">Nội dung góp ý</label>
+          <textarea id="noi-dung-gop-y" rows="5" required placeholder="Nhập chi tiết nội dung góp ý..."></textarea>
           <div>Nội dung phải từ 10 đến 800 ký tự.</div>
         </div>
 
         <div>
-          <input type="checkbox" id="privacy-check" required>
-          <label for="privacy-check">Tôi xác nhận không nhập thông tin cá nhân nhạy cảm.</label>
+          <input type="checkbox" id="xac-nhan-bao-mat" required>
+          <label for="xac-nhan-bao-mat">Tôi xác nhận không nhập thông tin cá nhân nhạy cảm.</label>
           <div>Vui lòng chọn xác nhận trước khi gửi.</div>
         </div>
 
         <button type="submit">Kiểm tra và gửi thử ↗</button>
-        <div id="contact-message-status" role="status" aria-live="polite"></div>
+        <div id="trang-thai-gui" role="status" aria-live="polite"></div>
       </form>
     </div>
   </main>
