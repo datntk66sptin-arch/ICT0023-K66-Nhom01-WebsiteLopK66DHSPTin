@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Danh sách thành viên lớp K66 Sư phạm Tin học">
   <title>Thành viên | K66 ĐHSP Tin</title>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
   <header>
@@ -13,7 +14,7 @@
       <ul>
         <li><a href="index.html">Trang chủ</a></li>
         <li><a aria-current="page" href="members.html">Thành viên</a></li>
-        <li><a href="schedule.html">Thời khóa biểu</a></li>
+        <li><a href="tkb.html">Thời khóa biểu</a></li>
         <li><a href="ramdom.html">Random trực nhật</a></li>
         <li><a href="contact.html">Liên hệ</a></li>
       </ul>
@@ -21,32 +22,31 @@
   </header>
 
   <main>
-
-    <section>
+    <section id="danh-sach-thanh-vien-section">
       <h1>Danh Sách Thành Viên Lớp</h1>
       <p>Tra cứu 58 sinh viên lớp K66 Sư phạm Tin học.</p>
 
       <div>
         <div>
-          <label for="member-search">Tìm theo tên</label>
-          <input id="member-search" type="search" placeholder="Tìm theo tên hoặc chức vụ...">
+          <label for="tim-thanh-vien">Tìm theo tên</label>
+          <input id="tim-thanh-vien" type="search" placeholder="Tìm theo tên hoặc chức vụ...">
         </div>
         <div>
-          <label for="role-filter">Lọc chức vụ</label>
-          <select id="role-filter">
-            <option value="all">Tất cả chức vụ</option>
+          <label for="loc-chuc-vu">Lọc chức vụ</label>
+          <select id="loc-chuc-vu">
+            <option value="tat-ca">Tất cả chức vụ</option>
           </select>
         </div>
         <div>
-          <label for="sort-order">Sắp xếp</label>
-          <select id="sort-order">
-            <option value="asc">Tên A → Z</option>
-            <option value="desc">Tên Z → A</option>
+          <label for="sap-xep">Sắp xếp</label>
+          <select id="sap-xep">
+            <option value="tang-dan">Tên A → Z</option>
+            <option value="giam-dan">Tên Z → A</option>
           </select>
         </div>
       </div>
 
-      <div id="member-grid" aria-live="polite"></div>
+      <div id="danh-sach-thanh-vien" aria-live="polite"></div>
     </section>
   </main>
 
