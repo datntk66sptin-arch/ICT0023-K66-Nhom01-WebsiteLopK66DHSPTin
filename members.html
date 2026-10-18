@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Danh sách thành viên lớp K66 Sư phạm Tin học">
-  <title>Thành viên | K66 ĐHSP Tin</title>
+  <meta name="description" content="Danh sách 58 thành viên lớp K66 Sư phạm Tin học theo bảng lớp người dùng cung cấp.">
+  <title>Thành viên | K66 Sư phạm Tin học</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -12,8 +12,8 @@
   <link href="assets/style.css" rel="stylesheet">
 </head>
 <body>
-  <div class="thanh-vien-tren"></div>
 
+  <div class="thanh-vien-tren"></div>
   <nav class="navbar navbar-expand-lg thanh-menu sticky-top" aria-label="Điều hướng chính">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
@@ -33,62 +33,80 @@
           <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
           <li class="nav-item"><a class="nav-link active" aria-current="page" href="members.html">Thành viên</a></li>
           <li class="nav-item"><a class="nav-link" href="tkb.html">Thời khóa biểu</a></li>
-          <li class="nav-item"><a class="nav-link" href="ramdom.html">Random trực nhật</a></li>
+          <li class="nav-item"><a class="nav-link" href="random.html">Random trực nhật</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Liên hệ</a></li>
         </ul>
 
         <a class="btn nut-kham-pha-menu d-none d-lg-inline-flex align-items-center gap-1" href="members.html">
-          Khám phá lớp <span aria-hidden="true">↗</span>
+          Khám phá lớp 
         </a>
       </div>
     </div>
   </nav>
 
-  <main class="py-5">
-    <section id="danh-sach-thanh-vien-section" class="container bg-white p-4 p-md-5 rounded-4 border shadow-sm">
-      <div class="mb-4">
-        <span class="nhan-nho">DANH SÁCH LỚP</span>
-        <h1 class="fw-bold mt-1">Danh Sách Thành Viên Lớp</h1>
-        <p class="text-muted">Tra cứu 58 sinh viên lớp K66 Sư phạm Tin học</p>
+  <main>
+    <section class="khu-vuc-chao-mung py-5">
+      <div class="container position-relative">
+        <div class="nhan-nho">
+          LỚP K66 SƯ PHẠM TIN
+        </div>
+        <h1 class="tieu-de-chao-mung">Thành viên<br>
+          <span class="chu-chuyen-mau">cùng một hành trình.</span>
+        </h1>
+        <p class="doan-van-chao-mung">Tra cứu 58 thành viên trong lớp, tìm theo tên và lọc theo chức vụ.</p>
+      </div>
+    </section>
+
+    <section class="container khoang-cach-noi-dung pt-4">
+
+      <div class="khung-thong-bao-nho">
+        <div>
+          <b>Danh sách theo bảng lớp</b>
+          <small>Chức vụ để trống trong bảng được hiển thị là “Chưa ghi chức vụ”</small>
+        </div>
+        <a href="tkb.html" class="ms-auto nut-lien-ket-nhanh">Xem thời khóa biểu </a>
       </div>
 
-      <div class="row g-3 p-3 bg-light rounded-3 border mb-4">
-        <div class="col-md-5">
-          <label for="tim-thanh-vien" class="form-label fw-semibold small">Tìm theo tên</label>
-          <input id="tim-thanh-vien" type="search" class="form-control" placeholder="Nhập tên thành viên cần tìm...">
+      <div class="thanh-cong-cu-loc mt-4">
+        <div class="khu-vuc-tim-kiem">
+          <span class="bieu-tuong-tim-kiem" aria-hidden="true">⌕</span>
+          <input id="member-search" type="search" class="form-control" placeholder="Tìm theo tên hoặc chức vụ…" autocomplete="off">
+          <button id="btn-clear-input" type="button" class="nut-xoa-tim-kiem d-none" aria-label="Xóa từ khóa tìm kiếm">&times;</button>
         </div>
-        <div class="col-md-4">
-          <label for="loc-chuc-vu" class="form-label fw-semibold small">Chức vụ</label>
-          <select id="loc-chuc-vu" class="form-select">
-            <option value="tat-ca">Tất cả chức vụ</option>
-          </select>
-        </div>
-        <div class="col-md-3">
-          <label for="sap-xep" class="form-label fw-semibold small">Sắp xếp</label>
-          <select id="sap-xep" class="form-select">
-            <option value="tang-dan">Tên A → Z</option>
-            <option value="giam-dan">Tên Z → A</option>
-          </select>
-        </div>
+        <select id="role-filter" class="form-select d-none">
+          <option value="all">Tất cả chức vụ</option>
+        </select>
+        <select id="sort-order" class="form-select">
+          <option value="asc">Tên gọi A → Z</option>
+          <option value="desc">Tên gọi Z → A</option>
+        </select>
       </div>
 
-      <div id="danh-sach-thanh-vien" aria-live="polite"></div>
+      <div class="dong-ket-qua my-3">
+        <span id="member-count" aria-live="polite">Đang tải danh sách…</span>
+        <button id="clear-search" class="nut-chu-khong-vien" type="button">Xóa bộ lọc</button>
+      </div>
+
+      <div id="member-grid" class="row g-3" aria-live="polite"></div>
+
+      <div id="empty-state" class="empty-state d-none text-center py-5">
+        <span style="font-size: 2rem; color: #b81b24;">⌕</span>
+        <h3>Chưa tìm thấy kết quả</h3>
+        <p>Thử từ khóa khác hoặc xóa bộ lọc.</p>
+      </div>
     </section>
   </main>
 
-  <footer class="chan-trang py-4 border-top">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+  <footer class="chan-trang">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-3">
       <div>
-        <a class="nhan-hieu-chan-trang fw-bold text-decoration-none" href="index.html">K66 <span>Sư phạm Tin học</span></a>
-        <p class="text-muted small mb-0 mt-1">Sản phẩm Bài tập lớn Nhóm 01 - Học phần ICT0023</p>
+        <a class="nhan-hieu-chan-trang" href="index.html">K66 <span>Sư phạm Tin học</span></a>
+        <p>Không gian học tập và kết nối do sinh viên xây dựng.</p>
       </div>
-      <div class="lien-ket-chan-trang d-flex gap-3">
-        <a href="members.html" class="text-decoration-none text-secondary">Thành viên</a>
-        <a href="ramdom.html" class="text-decoration-none text-secondary">Random trực nhật</a>
-        <a href="contact.html" class="text-decoration-none text-secondary">Góp ý</a>
-      </div>
-      <small class="text-muted"> 2026 · K66 ĐHSP Tin</small>
-    </div>
+      <div class="lien-ket-chan-trang">
+        <a href="members.html">Thành viên</a>
+        <a href="random.html">Random trực nhật</a>
+        <a href="contact.html">Góp ý</a>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
