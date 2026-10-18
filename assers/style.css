@@ -1,6 +1,3 @@
-/* ==========================================
-   1. BIẾN MÀU CƠ BẢN
-   ========================================== */
 :root {
   --mau-chu-chinh: #11263e;
   --mau-nen: #ffffff;
@@ -32,14 +29,13 @@ body {
   font-family: "DM Sans", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.65;
- /* Hình nền lưới ô to & đậm màu */
-/* Hình nền lưới ô to & đậm màu */
+
   background-color: #fafafa; /* Nền trắng sáng nhẹ */
   background-image: 
     linear-gradient(to right, rgba(0, 0, 0, 0.12) 1.5px, transparent 1.5px),
     linear-gradient(to bottom, rgba(0, 0, 0, 0.12) 1.5px, transparent 1.5px);
-  background-size: 70px 70px; /* Kích thước ô lưới to (65px) */
-  background-attachment: fixed; /* Cố định nền khi cuộn trang */
+  background-size: 70px 70px; 
+  background-attachment: fixed; 
 
 }
 
@@ -158,7 +154,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 
 /* ==========================================
-   3. KHU VỰC CHÀO MỪNG (HERO)
+   3. KHU VỰC CHÀO MỪNG 
    ========================================== */
 
 /* Banner chính trang chủ */
