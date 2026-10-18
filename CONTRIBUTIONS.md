@@ -30,3 +30,13 @@
 - **Nguyễn Tấn Tài:** Định dạng bảng Thời khóa biểu responsive, căn chỉnh bố cục đọc tốt trên màn hình thiết bị di động.
 - **Tòng Văn Dương:** Định dạng giao diện Form góp ý, các trường nhập liệu (inputs) và khu vực hiển thị trạng thái gửi thông báo.
 - **Khuất Anh Tú:** Xây dựng tệp `style.css` dùng chung cho toàn bộ website, định dạng giao diện thẻ thành viên (Cards), công cụ bốc thăm và Carousel slide ảnh.
+
+### Mốc v0.4: `v0.4-tuong-tac` (Lập trình JavaScript & jQuery)
+- **Nguyễn Tiến Đạt:** Duyệt các Pull Request hợp nhất mã nguồn vào nhánh `main`, kiểm tra tính đồng bộ giao diện 5 trang.
+- **Nguyễn Tấn Tài:** Hoàn thiện hiển thị lịch học và phối hợp kiểm thử bộ lọc.
+- **Tòng Văn Dương:** Viết kịch bản JavaScript/jQuery kiểm tra lỗi dữ liệu đầu vào (Validation) cho Form góp ý trên `contact.html`, tích hợp nút Dùng thử & Đặt lại.
+- **Khuất Anh Tú:** Lập trình tệp `tenthanhvien.js` (chứa dữ liệu 58 thành viên) và tệp `script.js` (chức năng render danh sách thành viên, lọc/tìm kiếm theo tên & chức vụ, chức năng bốc thăm trực nhật ngẫu nhiên).
+
+### Mốc v1.0: `v1.0-final` (Tối ưu, Kiểm thử & Đóng gói)
+- **Cả nhóm:** Kiểm thử ứng dụng trên cửa sổ ẩn danh (Incognito), đảm bảo không có lỗi Console trong luồng chính, xuất bản hoàn chỉnh qua GitHub Pages và hoàn thiện hồ sơ báo cáo nộp học phần.
+
