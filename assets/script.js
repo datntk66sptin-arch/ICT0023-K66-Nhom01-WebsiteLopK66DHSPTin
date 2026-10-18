@@ -1,11 +1,7 @@
 (() => {
   "use strict";
-
-  // 1. Lấy dữ liệu danh sách thành viên từ tenthanhvien.js
   const rosterMembers = (window.CLASS_ROSTER || []).map(person => ({ ...person }));
   let members = rosterMembers.map(person => ({ ...person }));
-
-  // Hàm mã hóa ký tự đặc biệt phòng chống XSS
   const escapeHtml = value =>
     String(value).replace(/[&<>"']/g, char => ({
       "&": "&amp;",
@@ -14,8 +10,6 @@
       '"': "&quot;",
       "'": "&#39;"
     }[char]));
-
-  // Hàm hiển thị thông báo giao diện
   const setNotice = (element, message, type) => {
     if (!element) return;
     element.className = `alert alert-${type}`;
@@ -40,7 +34,6 @@
     element.textContent = message;
   };
 
-  // 2. Chuyển đổi tiếng Việt có dấu thành không dấu để tìm kiếm không phân biệt dấu
   function removeVietnameseTones(str) {
     return String(str || "")
       .normalize("NFD")
@@ -49,7 +42,6 @@
       .replace(/Đ/g, "D");
   }
 
-  // 3. XỬ LÝ TRANG THÀNH VIÊN (members.html)
   function filteredMembers(query, role, order) {
     const normalized = removeVietnameseTones(query.trim().toLocaleLowerCase("vi"));
     return members.filter(person => {
@@ -65,7 +57,6 @@
     });
   }
 
-  // Tự động điền tùy chọn danh sách chức vụ vào menu <select id="loc-chuc-vu">
   function populateRoleOptions() {
     const select = document.querySelector("#loc-chuc-vu");
     if (!select) return;
@@ -76,7 +67,6 @@
     select.value = roles.includes(previous) ? previous : "tat-ca";
   }
 
-  // Hiển thị các thẻ thành viên vào #danh-sach-thanh-vien
   function renderMemberCards() {
     const grid = document.querySelector("#danh-sach-thanh-vien");
     if (!grid) return;
@@ -105,7 +95,6 @@
     `).join("");
   }
 
-  // Khởi tạo các sự kiện cho trang Thành viên
   if (document.querySelector("#danh-sach-thanh-vien")) {
     populateRoleOptions();
     renderMemberCards();
@@ -121,7 +110,6 @@
       if (el) el.addEventListener("change", renderMemberCards);
     });
 
-    // Phím tắt Ctrl + K để di chuyển nhanh tới thanh tìm kiếm
     document.addEventListener("keydown", event => {
       if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k") {
         if (searchInput) {
@@ -133,7 +121,6 @@
     });
   }
 
-  // 4. XỬ LÝ TRANG RANDOM TRỰC NHẬT (ramdom.html)
   const randomBtn = document.querySelector("#nut-boc-tham");
   const resultDiv = document.querySelector("#ket-qua-truc-nhat");
 
@@ -144,7 +131,6 @@
       randomBtn.disabled = true;
       let counter = 0;
 
-      // Hiệu ứng vòng quay số ngẫu nhiên
       const interval = setInterval(() => {
         const tempGroup = groups[Math.floor(Math.random() * groups.length)];
         resultDiv.textContent = `Đang bốc thăm...  ${tempGroup}`;
@@ -154,7 +140,6 @@
           clearInterval(interval);
           const finalGroup = groups[Math.floor(Math.random() * groups.length)];
 
-          // Lấy danh sách thành viên thuộc tổ trúng thưởng
           const groupMembers = rosterMembers
             .filter(m => m.role.toLowerCase().includes(finalGroup.toLowerCase()))
             .map(m => m.name);
@@ -170,7 +155,6 @@
     });
   }
 
-  // 5. XỬ LÝ TRANG LIÊN HỆ & GÓP Ý (contact.html)
   const contactForm = document.querySelector("#bieu-mau-lien-he");
   if (contactForm) {
     const nameInput = document.querySelector("#ho-ten");

@@ -5,35 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Thời khóa biểu lớp K66 Sư phạm Tin học">
   <title>Thời khóa biểu | K66 ĐHSP Tin</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/style.css" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav aria-label="Điều hướng chính">
-      <a href="index.html"><span>K66</span> ĐHSP TIN</a>
-      <ul>
-        <li><a href="index.html">Trang chủ</a></li>
-        <li><a href="members.html">Thành viên</a></li>
-        <li><a aria-current="page" href="tkb.html">Thời khóa biểu</a></li>
-        <li><a href="ramdom.html">Random trực nhật</a></li>
-        <li><a href="contact.html">Liên hệ</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="thanh-vien-tren"></div>
 
-  <main>
-    <section id="thoi-khoa-bieu-section">
-      <header>
-        <h1>Thời Khóa Biểu Học Kỳ 2</h1>
-        <p>Lịch học hàng tuần chính thức của lớp K66 ĐHSP Tin học từ Thứ Hai đến Thứ Bảy.</p>
+  <nav class="navbar navbar-expand-lg thanh-menu sticky-top" aria-label="Điều hướng chính">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+        <span class="khoi-logo">K66</span>
+        <div class="chu-logo">
+          <span class="tieu-de-logo">K66 Sư phạm Tin</span>
+          <span class="mo-ta-logo">K66 · SƯ PHẠM TIN HỌC</span>
+        </div>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-chinh" aria-controls="menu-chinh" aria-expanded="false" aria-label="Mở menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu-chinh">
+        <ul class="navbar-nav mx-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
+          <li class="nav-item"><a class="nav-link" href="members.html">Thành viên</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="tkb.html">Thời khóa biểu</a></li>
+          <li class="nav-item"><a class="nav-link" href="ramdom.html">Random trực nhật</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Liên hệ</a></li>
+        </ul>
+
+        <a class="btn nut-kham-pha-menu d-none d-lg-inline-flex align-items-center gap-1" href="members.html">
+          Khám phá lớp <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="py-5">
+    <section id="thoi-khoa-bieu-section" class="container bg-white p-4 p-md-5 rounded-4 border shadow-sm">
+      <header class="mb-4">
+        <span class="nhan-nho">LỊCH HỌC HÀNG TUẦN</span>
+        <h1 class="fw-bold mt-1">Thời Khóa Biểu Học Kỳ 2</h1>
+        <p class="text-muted">Lịch học hàng tuần chính thức của lớp K66 ĐHSP Tin học từ Thứ Hai đến Thứ Bảy.</p>
       </header>
 
-      <div>
-        <table>
-          <caption>Thời khóa biểu hàng tuần</caption>
-          <thead>
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover align-middle shadow-sm">
+          <caption class="text-muted">Thời khóa biểu hàng tuần lớp K66 ĐHSP Tin</caption>
+          <thead class="table-light text-center">
             <tr>
-              <th scope="col">Tiết</th>
+              <th scope="col" style="width: 12%;">Tiết</th>
               <th scope="col">Thứ Hai</th>
               <th scope="col">Thứ Ba</th>
               <th scope="col">Thứ Tư</th>
@@ -44,30 +68,30 @@
           </thead>
           <tbody>
             <tr>
-              <th scope="row">Tiết 1 - 2</th>
+              <th scope="row" class="table-light text-center fw-bold">Tiết 1 - 2</th>
               <td></td><td></td><td></td><td></td>
-              <td><strong>CN Xã hội khoa học</strong><br><small>P. 308Y - GV. Nguyễn Thị Thu Châu</small></td>
+              <td class="bg-light"><strong>CN Xã hội khoa học</strong><br><small class="text-muted">P. 308Y - GV. Nguyễn Thị Thu Châu</small></td>
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Tiết 4 - 5</th>
+              <th scope="row" class="table-light text-center fw-bold">Tiết 4 - 5</th>
               <td></td><td></td><td></td><td></td>
-              <td><strong>Tiếng Anh 3</strong><br><small>P. A102 - GV. Khổng Quỳnh Hương</small></td>
+              <td class="bg-light"><strong>Tiếng Anh 3</strong><br><small class="text-muted">P. A102 - GV. Khổng Quỳnh Hương</small></td>
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Tiết 6 - 8</th>
-              <td><strong>Thiết kế Web</strong><br><small>P. A404 - GV. Nguyễn Duy Hiếu</small></td>
-              <td><strong>Cấu trúc dữ liệu & GT</strong><br><small>P. A312 - GV. Nguyễn Văn Tú</small></td>
-              <td><strong>Thiết kế Web</strong><br><small>P. A404 - GV. Nguyễn Duy Hiếu</small></td>
-              <td><strong>Cấu trúc dữ liệu & GT</strong><br><small>P. A312 - GV. Nguyễn Văn Tú</small></td>
+              <th scope="row" class="table-light text-center fw-bold">Tiết 6 - 8</th>
+              <td class="bg-light"><strong>Thiết kế Web</strong><br><small class="text-muted">P. A404 - GV. Nguyễn Duy Hiếu</small></td>
+              <td class="bg-light"><strong>Cấu trúc dữ liệu & GT</strong><br><small class="text-muted">P. A312 - GV. Nguyễn Văn Tú</small></td>
+              <td class="bg-light"><strong>Thiết kế Web</strong><br><small class="text-muted">P. A404 - GV. Nguyễn Duy Hiếu</small></td>
+              <td class="bg-light"><strong>Cấu trúc dữ liệu & GT</strong><br><small class="text-muted">P. A312 - GV. Nguyễn Văn Tú</small></td>
               <td></td><td></td>
             </tr>
             <tr>
-              <th scope="row">Tiết 8 - 10</th>
+              <th scope="row" class="table-light text-center fw-bold">Tiết 8 - 10</th>
               <td></td>
-              <td><strong>Lý luận dạy học Tin học</strong><br><small>P. A312 - GV. Phạm Đình Thành</small></td>
-<td><strong>Lý luận dạy học Tin học</strong><br><small>P. A312 - GV. Phạm Đình Thành</small></td>
+              <td class="bg-light"><strong>Lý luận dạy học Tin học</strong><br><small class="text-muted">P. A312 - GV. Phạm Đình Thành</small></td>
+              <td class="bg-light"><strong>Lý luận dạy học Tin học</strong><br><small class="text-muted">P. A312 - GV. Phạm Đình Thành</small></td>
               <td></td><td></td><td></td>
             </tr>
           </tbody>
@@ -76,14 +100,24 @@
     </section>
   </main>
 
-  <footer>
-    <div>
+  <footer class="chan-trang py-4 border-top">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
       <div>
-        <h5>K66 ĐHSP TIN HỌC</h5>
-        <small>Sản phẩm Bài tập lớn Nhóm 01 - Học phần ICT0023</small>
+        <a class="nhan-hieu-chan-trang fw-bold text-decoration-none" href="index.html">K66 <span>Sư phạm Tin học</span></a>
+        <p class="text-muted small mb-0 mt-1">Sản phẩm Bài tập lớn Nhóm 01 - Học phần ICT0023</p>
       </div>
-      <small> 2026 K66 ĐHSP Tin</small>
+      <div class="lien-ket-chan-trang d-flex gap-3">
+        <a href="members.html" class="text-decoration-none text-secondary">Thành viên</a>
+        <a href="ramdom.html" class="text-decoration-none text-secondary">Random trực nhật</a>
+        <a href="contact.html" class="text-decoration-none text-secondary">Góp ý</a>
+      </div>
+      <small class="text-muted"> 2026 · K66 ĐHSP Tin</small>
     </div>
   </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/tenthanhvien.js"></script>
+  <script src="assets/script.js"></script>
 </body>
 </html>
