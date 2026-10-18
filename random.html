@@ -1,85 +1,182 @@
 <!doctype html>
 <html lang="vi">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Bốc thăm tổ trực nhật ngẫu nhiên lớp K66 Sư phạm Tin học">
-  <title>Random Trực Nhật | K66 ĐHSP Tin</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;5…700&family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/style.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Bốc thăm ngẫu nhiên tổ trực nhật lớp K66 Sư phạm Tin học.">
+    <title>Random tổ trực nhật | K66 Sư phạm Tin học</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/style.css" rel="stylesheet">
 </head>
 <body>
-  <div class="thanh-vien-tren"></div>
+    <!-- THANH MỎNG TRÊN CÙNG -->
+    <div class="thanh-vien-tren"></div>
 
-  <nav class="navbar navbar-expand-lg thanh-menu sticky-top" aria-label="Điều hướng chính">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
-        <span class="khoi-logo">K66</span>
-        <div class="chu-logo">
-          <span class="tieu-de-logo">K66 Sư phạm Tin</span>
-          <span class="mo-ta-logo">K66 · SƯ PHẠM TIN HỌC</span>
+    <!-- THANH MENU ĐIỀU HƯỚNG -->
+    <nav class="navbar navbar-expand-lg thanh-menu sticky-top" aria-label="Điều hướng chính">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+                <span class="khoi-logo">K66</span>
+                <div class="chu-logo">
+                    <span class="tieu-de-logo">K66 Sư phạm Tin</span>
+                    <span class="mo-ta-logo">K66 · SƯ PHẠM TIN HỌC</span>
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-chinh" aria-controls="menu-chinh" aria-expanded="false" aria-label="Mở menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu-chinh">
+                <ul class="navbar-nav mx-auto align-items-lg-center gap-lg-1">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="members.html">Thành viên</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tkb.html">Thời khóa biểu</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="random.html">Random trực nhật</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Liên hệ</a></li>
+                </ul>
+
+                <a class="btn nut-kham-pha-menu d-none d-lg-inline-flex align-items-center gap-1" href="members.html">
+                    Khám phá lớp 
+                </a>
+            </div>
         </div>
-      </a>
+    </nav>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-chinh" aria-controls="menu-chinh" aria-expanded="false" aria-label="Mở menu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <main>
+        <section class="khu-vuc-chao-mung py-5">
+            <div class="container">
+                <div class="nhan-nho"> BỐC THĂM CÔNG BẰNG</div>
+                <h1 class="tieu-de-chao-mung">Random tổ<br><span class="chu-chuyen-mau">trực nhật.</span></h1>
+                <p class="doan-van-chao-mung">Bốc thăm một trong sáu tổ theo danh sách lớp. Không phân công vào thứ Bảy hoặc Chủ nhật.</p>
+            </div>
+        </section>
 
-      <div class="collapse navbar-collapse" id="menu-chinh">
-        <ul class="navbar-nav mx-auto align-items-lg-center gap-lg-1">
-          <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
-          <li class="nav-item"><a class="nav-link" href="members.html">Thành viên</a></li>
-          <li class="nav-item"><a class="nav-link" href="tkb.html">Thời khóa biểu</a></li>
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="random.html">Random trực nhật</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Liên hệ</a></li>
-        </ul>
+        <section class="container khoang-cach-noi-dung pt-4">
+            <article class="the-dac-diem">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <div>
+                        <span class="nhan-nho">DANH SÁCH PHÂN TỔ</span>
+                        <h2 class="mt-2">Sáu tổ trực nhật</h2>
+                        <p class="text-muted">Tổ trưởng lấy từ dữ liệu thành viên của lớp.</p>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap gap-2 mb-4">
+                    <button id="draw-group" class="btn nut-noi-bat" type="button"> Bốc thăm tổ hôm nay</button>
+                </div>
+                <div id="group-list" class="luoi-danh-sach-to"></div>
+                <div id="duty-result" class="ket-qua-truc-nhat" role="status" aria-live="polite"></div>
+                <div id="duty-status" class="alert alert-success mt-3" role="status" aria-live="polite"></div>
+                <div class="mt-4 p-3 rounded" style="background: #fbfcfc; border: 1px solid #e4ecee;">
+                    <b>Cách bốc thăm</b>
+                    <p class="m-0 text-muted">Hệ thống chọn ngẫu nhiên một tổ và tránh lặp lại tổ vừa được chọn lần trước. Thứ Bảy và Chủ nhật không có lượt trực.</p>
+                </div>
+            </article>
+        </section>
+    </main>
 
-        <a class="btn nut-kham-pha-menu d-none d-lg-inline-flex align-items-center gap-1" href="members.html">
-          Khám phá lớp <span aria-hidden="true">↗</span>
-        </a>
-      </div>
-    </div>
-  </nav>
+    <!-- CHÂN TRANG -->
+    <footer class="chan-trang">
+        <div class="container d-flex flex-column flex-md-row justify-content-between gap-3">
+            <div>
+                <a class="nhan-hieu-chan-trang" href="index.html">K66 <span>Sư phạm Tin học</span></a>
+                <p>Không gian học tập và kết nối do sinh viên xây dựng.</p>
+            </div>
+            <div class="lien-ket-chan-trang">
+                <a href="tkb.html">Thời khóa biểu</a>
+                <a href="random.html">Random trực nhật</a>
+                <a href="contact.html">Góp ý</a>
+    </footer>
 
-  <main class="py-5">
-    <section id="boc-tham-truc-nhat" class="container bg-white p-4 p-md-5 rounded-4 border shadow-sm text-center" style="max-width: 680px;">
-      <span class="nhan-nho">CÔNG CỤ TIỆN ÍCH</span>
-      <h1 class="fw-bold mt-2"> Bốc Thăm Tổ Trực Nhật Ngẫu Nhiên</h1>
-      <p class="text-muted">Công cụ bốc thăm chọn tổ trực nhật ngẫu nhiên áp dụng cho các ngày học trong tuần.</p>
-      
-      <div class="my-4">
-        <button id="nut-boc-tham" type="button" class="btn nut-noi-bat btn-lg px-4 py-3 fs-5">
-           Bốc thăm tổ trực nhật hôm nay
-        </button>
-</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/tenthanhvien.js"></script>
+    <script src="assets/script.js"></script>
+    <script>
+    (() => {
+        const roster = window.CLASS_ROSTER || [];
 
-      <div id="ket-qua-truc-nhat" class="mt-4 p-3 bg-light rounded-3 border fw-bold fs-5" role="status" aria-live="polite">
-        Bấm nút phía trên để bắt đầu bốc thăm!
-      </div>
-    </section>
-  </main>
+        const sizes = roster.reduce((acc, person) => {
+            const match = person.group || (person.role && person.role.match(/tổ\s*(\d+)/i)?.[1]);
+            if (match) {
+                acc[match] = (acc[match] || 0) + 1;
+            }
+            return acc;
+        }, {});
 
-  <footer class="chan-trang py-4 border-top">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-      <div>
-        <a class="nhan-hieu-chan-trang fw-bold text-decoration-none" href="index.html">K66 <span>Sư phạm Tin học</span></a>
-        <p class="text-muted small mb-0 mt-1">Sản phẩm Bài tập lớn Nhóm 01 - Học phần ICT0023</p>
-      </div>
-      <div class="lien-ket-chan-trang d-flex gap-3">
-        <a href="members.html" class="text-decoration-none text-secondary">Thành viên</a>
-        <a href="random.html" class="text-decoration-none text-secondary">Random trực nhật</a>
-        <a href="contact.html" class="text-decoration-none text-secondary">Góp ý</a>
-      </div>
-      <small class="text-muted"> 2026 · K66 ĐHSP Tin</small>
-    </div>
-  </footer>
+        const leaders = roster.map(person => {
+            const m = person.role && person.role.match(/(?:Tổ\s*trưởng\s*tổ|TổTrưởngTổ)\s*(\d+)/i);
+            return m ? { id: Number(m[1]), name: person.name } : null;
+        }).filter(Boolean).sort((a, b) => a.id - b.id);
 
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/tenthanhvien.js"></script>
-  <script src="assets/script.js"></script>
+        const list = document.querySelector('#group-list'),
+              btn = document.querySelector('#draw-group'),
+              result = document.querySelector('#duty-result'),
+              status = document.querySelector('#duty-status'),
+              lastKey = 'k66_duty_last_group';
+
+        if (list) {
+            list.innerHTML = leaders.map(g => {
+                const count = sizes[g.id] || 0;
+                return '<article class="the-to-truc-nhat">' +
+                       '<span class="nhan-nho">TỔ ' + String(g.id).padStart(2, '0') + '</span>' +
+                       '<h3>Tổ ' + g.id + '</h3>' +
+                       '<p>Tổ trưởng: ' + g.name + '<br>' + count + ' thành viên</p>' +
+                       '</article>';
+            }).join('');
+        }
+
+        function dayName(d) {
+            return ['Chủ nhật', 'Thứ Hai', 'Thứ Ba', 'Thứ Tư', 'Thứ Năm', 'Thứ Sáu', 'Thứ Bảy'][d.getDay()];
+        }
+
+        function refresh() {
+            const d = new Date(),
+                  weekend = d.getDay() === 0 || d.getDay() === 6;
+            if (btn) btn.disabled = weekend;
+            if (status) {
+                status.textContent = weekend 
+                    ? 'Hôm nay là ' + dayName(d) + ', không có lịch trực nhật.' 
+                    : 'Hôm nay: ' + dayName(d) + ' · ngày trực nhật trong tuần.';
+            }
+        }
+
+        if (btn) {
+            btn.addEventListener('click', () => {
+                const d = new Date();
+                if (d.getDay() === 0 || d.getDay() === 6) {
+                    refresh();
+                    return;
+                }
+                let last = '';
+                try {
+                    last = localStorage.getItem(lastKey) || '';
+                } catch (e) {}
+
+                const choices = leaders.filter(g => String(g.id) !== last);
+                const available = choices.length > 0 ? choices : leaders;
+                const g = available[Math.floor(Math.random() * available.length)];
+
+                if (result && g) {
+                    result.innerHTML = '<small>' + dayName(d).toUpperCase() + '</small>' +
+                                       '<h2>Tổ ' + g.id + ' trực nhật</h2>' +
+                                       '<p>Tổ trưởng: ' + g.name + '</p>';
+                    result.classList.add('show');
+                }
+
+                try {
+                    if (g) localStorage.setItem(lastKey, String(g.id));
+                } catch (e) {}
+            });
+        }
+
+        const yearEl = document.querySelector('[data-year]');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+        refresh();
+    })();
+    </script>
 </body>
 </html>
